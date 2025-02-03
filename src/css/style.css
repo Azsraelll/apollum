@@ -158,15 +158,24 @@ main {
   margin-bottom: 10px;
 }
 
-#hero #heroEsquerdo #button button{
+#hero #heroEsquerdo #button #planos{
   width: 200px;
   height: 55px;
   border-radius: 10px;
   border: 2px solid black;
   box-shadow: 2px 2px 2px #000000;
   margin: 5px 10px 0px 10px;
-  
+  background-color: var(--cinza-claro);
 }
 
+#hero #heroEsquerdo #button #whattsap{
+  width: 200px;
+  height: 55px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px #000000;
+  margin: 5px 10px 0px 10px;
+  background-color: rgb(40, 189, 40);
+}
 
 
