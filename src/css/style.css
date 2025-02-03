@@ -1,12 +1,101 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --cinza-claro: #666565;
-    --cinza-escuro: #333;
+:root {
+  --cinza-claro: #d9d9d9;
+  --cinza-escuro: #333;
+  --cinza: #666565;
+  --amarelo: #f2cb07;
+  --laranja-claro: #f6a609;
+  --laranja-escuro: #f28b0c;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*Header*/
+header {
+  width: 100%;
+  background-image: linear-gradient(to right, var(--cinza-escuro), var(--cinza-claro));
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.cabecalho .logotipo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.cabecalho .logotipo #img-apollum {
+  width: 150px;
+  margin-left: -25px;
+}
+
+.cabecalho .logotipo h1 {
+    font-size: 2rem;
+    margin-left: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.direita {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.cabecalho .menu ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-top: 5px;
+}
+
+.cabecalho .menu ul li {
+  padding: 5px;
+  padding-right: 10px;
+  font-size: 1.5rem;
+}
+
+.cabecalho .menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho #button {
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.cabecalho #button button {
+    margin-left: 10px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;;
+    color: #ffffff;
+    background-color: #333;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
