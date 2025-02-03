@@ -24,17 +24,19 @@ html {
 html {
   font-size: 62.5%;
   width: 100vw;
-  height: 100vh;
+  height: 81.6vh;
 }
 
 /*Header*/
 header {
-  width: 100%;
-  background-image: linear-gradient(to right, var(--cinza-escuro), var(--cinza-claro));
+  height: 170px;
+  background-color: var(--cinza-escuro);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   color: #ffffff;
-  margin-left: 20px;
+  padding: 10px;
+  border-bottom: 2px solid black;
 }
 
 .cabecalho .logotipo {
@@ -42,60 +44,129 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-bottom: 25px;
 }
 
 .cabecalho .logotipo #img-apollum {
   width: 150px;
-  margin-left: -25px;
 }
 
-.cabecalho .logotipo h1 {
-    font-size: 2rem;
-    margin-left: -20px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.cabecalho .logotipo h1{
+  font-size: 2.5rem;
+  margin-left: -10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 3px 3px 4px #000000;
+}
 
-.direita {
+.cabecalho .direita {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 15px;
+  width: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 
-.cabecalho .menu ul {
+.cabecalho .direita .menu ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding-top: 5px;
 }
 
-.cabecalho .menu ul li {
+.cabecalho .direita .menu ul li {
+  font-size: 1.8rem;
+  border-radius: 10px;
   padding: 5px;
-  padding-right: 10px;
-  font-size: 1.5rem;
+  margin-right: 5px;
 }
 
-.cabecalho .menu ul li a {
+.direita .menu ul li:hover {
+  transform: scale(1.2);
+  transition-duration: .3s;
+
+}
+
+.cabecalho .direita .menu ul li a {
   color: #ffffff;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.cabecalho .direita .menu ul li a:hover {
+  text-decoration: underline;
+}
+
 .cabecalho #button {
-  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-right: 10px;
+  padding: 0px 5px 0px 5px;
 }
 
 .cabecalho #button button {
-    margin-left: 10px;
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;;
-    color: #ffffff;
-    background-color: #333;
-    font-size: 1.4rem;
-    font-family: Arial, Helvetica, sans-serif;
-
+  width: 200px;
+  height: 55px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: var(--cinza);
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px 10px 0px 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px #000000;
 }
+
+.cabecalho #button button:hover {
+  transform: scale(1.2);
+  transition-duration: .3s;
+}
+
+
+/*Main*/
+
+main {
+  width: 100vw;
+  height: 81.6vh;
+  background-image: linear-gradient(to bottom, black, var(--cinza-escuro), var(--cinza), var(--cinza-escuro), black);
+}
+
+#hero #heroEsquerdo{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero #heroEsquerdo h1{
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-shadow: 3px 3px 4px #000000;
+  margin-bottom: 15px;
+  color: var(--cinza-claro);
+}
+
+#hero #heroEsquerdo p{
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-shadow: 3px 3px 4px #000000;
+  margin-bottom: 10px;
+}
+
+#hero #heroEsquerdo #button button{
+  width: 200px;
+  height: 55px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px #000000;
+  margin: 5px 10px 0px 10px;
+  
+}
+
+
+
