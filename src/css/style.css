@@ -16,13 +16,16 @@
 }
 
 :root {
-  --amarelo: #f2cb07;
-  --laranja: #f2a007;
-  --vermelho-escuro: #c33d28;
-  --cinza-claro: #D1D1D1;
-  --cinza: #808080;
-  --azul: #284e53;
-  --azul-escuro: #0d0d0d;
+  --amarelo-claro: #f2e744;
+  --amarelo-escuro: #f2d544;
+  --laranja-claro: #f27f3d;
+  --laranja: #f2622e;
+  --ciano-escuro: #025959;
+  --cinza-claro: #bbbbbb;
+  --cinza-escuro: #0d0d0d;
+  --roxo: #401f3a;
+  --roxo-escuro: #261724;
+  --roxo-claro: #623035;
 }
 
 html,
@@ -41,11 +44,9 @@ header {
 
   height: 140px;
   padding: 10px;
-  border-bottom: 2px solid black;
 
-  background-color: var(--cinza);
+  background-color: var(--cinza-escuro);
   color: #ffffff;
-  
 }
 
 .cabecalho .logotipo {
@@ -81,7 +82,7 @@ header {
 .cabecalho .direita .menu ul {
   display: flex;
   flex-direction: row;
-  
+
   list-style: none;
 }
 
@@ -105,7 +106,7 @@ header {
 
 .cabecalho .direita .menu ul li a:hover {
   text-decoration: underline;
-  color: var(--amarelo);
+  color: var(--cinza-claro);
 }
 
 .cabecalho #button {
@@ -113,24 +114,35 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   padding: 0px 5px 0px 5px;
 }
 
 .cabecalho #button button {
-  width: 200px;
-  height: 55px;
+  width: 180px;
+  height: 50px;
   border-radius: 10px;
-  color: #ffffff;
-  background-color: var(--cinza);
+
+  color: #000000;
+  background-image: linear-gradient(
+    to right,
+    var(--laranja-claro),
+    var(--amarelo-escuro),
+    var(--amarelo-claro),
+    var(--amarelo-escuro),
+    var(--laranja-claro)
+  );
+
   font-size: 1.8rem;
   font-family: Arial, Helvetica, sans-serif;
+
   margin: 0px 10px 0px 10px;
   border: 2px solid black;
   box-shadow: 2px 2px 2px #000000;
 }
 
 .cabecalho #button button:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   transition-duration: 0.3s;
 }
 
@@ -139,85 +151,112 @@ header {
 main {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    black,
-    var(--cinza-escuro),
-    var(--cinza),
-    var(--cinza-escuro),
-    black
-  );
 }
 
 #hero {
   width: 100vw;
   height: calc(100vh - 140px);
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  background-image: 
+  linear-gradient(to left bottom,
+    var(--amarelo-claro),
+    var(--amarelo-escuro),
+    var(--laranja-claro),
+    var(--laranja),
+    var(--roxo-claro),
+    var(--roxo),
+    var(--roxo-escuro),
+    var(--cinza-escuro));
 }
 
 #hero #heroEsquerdo {
-  color: white;
   display: flex;
   flex-direction: column;
-  width: 40vw;
-  height: 80vh;
   justify-content: center;
   align-items: center;
+
+  width: 40vw;
+  height: 80vh;
+
+  color: white;
 }
 
 #hero #heroEsquerdo h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   text-shadow: 3px 3px 4px #000000;
   margin-bottom: 15px;
-  color: var(--cinza-claro);
+  color: #cfcbcb;
+  text-decoration: underline;
 }
 
 #hero #heroEsquerdo p {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   text-shadow: 3px 3px 4px #000000;
   margin-bottom: 10px;
 }
 
+#hero #heroEsquerdo #button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 560px;
+}
+
 #hero #heroEsquerdo #button #planos {
-  width: 200px;
-  height: 55px;
+  width: 150px;
+  height: 45px;
+
   border-radius: 10px;
   border: 2px solid black;
   box-shadow: 2px 2px 2px #000000;
+
   margin: 5px 10px 0px 10px;
-  background-color: var(--cinza-claro);
-  font-size: 2em;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--laranja),
+    var(--laranja-claro),
+    var(--amarelo-escuro),
+    var(--amarelo-claro)
+  );
+
+  font-size: 2.5em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 #hero #heroEsquerdo #button #whattsap {
-  width: 200px;
-  height: 55px;
+  width: 150px;
+  height: 45px;
+
   border-radius: 10px;
   border: 2px solid black;
   box-shadow: 2px 2px 2px #000000;
+
   margin: 5px 10px 0px 10px;
-  background-color: rgb(40, 189, 40);
-  font-size: 2em;
+  background-color: rgb(62, 219, 62);
+
+  font-size: 2.5em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 #hero #heroEsquerdo #button #planos:hover {
-  transform: scale(1.2);
-  transition-duration: 0.3s;
-  background-color: var(--laranja-claro);
+  transform: scale(1.05);
+  transition-duration: 0.5s;
 }
 
 #hero #heroEsquerdo #button #whattsap:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   transition-duration: 0.3s;
 }
 
@@ -245,7 +284,7 @@ main {
   height: 20rem;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: var(--cinza-claro);
+  border-color: #000000;
   transform: rotateZ(45deg) rotateX(0deg) rotateY(0deg);
   transform-style: preserve-3d;
 }
@@ -256,7 +295,7 @@ main {
   height: 20rem;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: var(--cinza-claro);
+  border-color: #000000;
   transform: rotateZ(0deg) rotateX(90deg) rotateY(45deg) translateZ(10rem)
     translateY(10rem) translateX(0rem);
   transform-style: preserve-3d;
@@ -268,7 +307,7 @@ main {
   height: 20rem;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: var(--cinza-claro);
+  border-color: #000000;
   transform: rotateZ(0deg) rotateX(90deg) rotateY(-45deg) translateZ(10rem)
     translateY(10rem) translateX(0rem);
   transform-style: preserve-3d;
@@ -280,7 +319,7 @@ main {
   height: 20rem;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: var(--cinza-claro);
+  border-color: #000000;
   transform: rotateZ(0deg) rotateX(-90deg) rotateY(-45deg) translateZ(10rem)
     translateY(-10rem) translateX(0rem);
   transform-style: preserve-3d;
@@ -292,7 +331,7 @@ main {
   height: 20rem;
   border-style: solid;
   border-width: 0.2rem;
-  border-color: var(--cinza-claro);
+  border-color: #000000;
   transform: rotateZ(0deg) rotateX(90deg) rotateY(-45deg) translateZ(-10rem)
     translateY(10rem) translateX(0rem);
   transform-style: preserve-3d;
