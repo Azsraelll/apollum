@@ -1,5 +1,39 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 768px) {
+:root {
+  --amarelo-claro: #f2e744;
+  --amarelo-escuro: #f2d544;
+  --laranja-claro: #f27f3d;
+  --laranja: #f2622e;
+  --ciano-escuro: #025959;
+  --cinza-claro: #bbbbbb;
+  --cinza-escuro: #0d0d0d;
+  --roxo: #401f3a;
+  --roxo-escuro: #261724;
+  --roxo-claro: #623035;
+}
+
+@keyframes movimentoCirculo {
+    0% {
+      transform: rotateY(0deg) rotateX(45deg);
+    }
+    100% {
+      transform: rotateY(360deg) rotateX(45deg);
+    }
+  }
+
+
+/* MOBILE ATÉ 480PX */
+@media screen and (max-width: 480px) {
+    body header {
+        flex-direction: column;
+        position: relative;
+    }
     
+    body header .logotipo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
