@@ -52,22 +52,26 @@ header {
 .cabecalho .logotipo {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
 
   width: 350px;
 }
 
-.cabecalho .logotipo #img-apollum {
+.cabecalho .logotipo img {
   width: 100px;
+  height: 100px;
+  margin-right: 10px;
 }
-
 .cabecalho .logotipo h1 {
   font-size: 3rem;
   font-family: Arial, Helvetica, sans-serif;
 
   text-align: center;
   text-shadow: 3px 3px 4px #000000;
+}
+
+.cabecalho #burguer {
+  display: none;
 }
 
 .cabecalho .direita {
