@@ -102,8 +102,6 @@ header #cabecalho-esquerdo img {
   top: 5px;
   border-radius: 5px;
 
-  width: 94.5vw;
-
   padding: 5px;
 
   flex-direction: column;
@@ -120,13 +118,6 @@ header #cabecalho-esquerdo img {
   font-family: var(--fonte);
 
   padding: 10px;
-  margin: 10px;
-
-  background-image: linear-gradient(
-    to right top,
-    var(--verde),
-    var(--verde-claro)
-  );
 
   border-radius: 5px;
 
@@ -136,6 +127,7 @@ header #cabecalho-esquerdo img {
 #menu ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.1em;
 }
 
 .botoes {
@@ -290,6 +282,7 @@ main {
 main section {
   background-color: var(--laranja-claro);
   border: 1px solid black;
+  border-radius: 5px;
 
   padding: 10px;
 }
@@ -312,8 +305,49 @@ main section img {
   width: 100%;
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.315);
 }
 
 #sobre{
   margin-top: 20px;
+}
+
+#servicos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--laranja);
+
+  height: 70px;
+}
+
+#servicos h3 a{
+  color: var(--verde-escuro);
+  background-color: var(--laranja-claro);
+
+  text-decoration: none;
+
+  padding: 15px;
+
+  border: 2px solid var(--preto);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  
+}
+
+footer{
+  background-color: var(--preto);
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+footer h3{
+  padding: 10px;
+
+}
+
+footer p{
+  padding: 5px;
 }
