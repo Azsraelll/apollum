@@ -5,37 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apollum</title>
     <link rel="shortcut icon" href="src/img/logo.ico" type="image/ico" />
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
     <header>
-      <div id="cabecalho-direito">
+      <div id="cabecalho-esquerdo">
         <img src="src/img/logo-apollum.jpg" alt="Logo Apollum" />
         <h1>Apollum</h1>
+        <span class="cube"
+              ><section class="cubo">
+                <div class="face1">|</div>
+                <div class="face2">|</div>
+                <div class="face3">|</div>
+                <div class="face4">|</div>
+                <div class="face5">|</div>
+                <div class="face6">|</div>
+              </section></span
+            >
       </div>
 
-        <div class="cabecalho">
-          <button id="burguer" class="menu" onclick="clickMenu()">&#9776;</button>
-          <div id="cabecalho-esquerdo">
-            <nav id="menu" class="hidden">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-              </ul>
-            </nav>
-            <button type="submit">Login</button>
-            <button type="submit">Cadastrar</button>
-          </div>
-        </div>
+      <button id="menu-toggle" class="hamburger">&#9776;</button>
+      <div id="cabecalho-direito">
+        <nav id="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
       </div>
+
+
+        <div class="botoes">
+          <button type="submit">Login</button>
+          <button type="submit">Cadastrar</button>
+        </div>
+
     </header>
 
-    <!--
     <main>
       <section>
-
         <h2>Seja bem-vindo a Apollum</h2>
         <p>
           A Apollum é uma plataforma de gestão de projetos, onde voce pode
@@ -43,24 +53,34 @@
         </p>
       </section>
     </main>
-    -->
+
     <script>
-      function mudouTamanho() {
-          if (window.innerWidth >= 768){
-              itens.style.display = 'block'
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+
+        // Alternar visibilidade do menu ao clicar no hambúrguer
+        menuToggle.addEventListener("click", function () {
+          if (menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "flex"; // Mostra o menu
           } else {
-              itens.style.display = 'none'
+            menu.style.display = "none"; // Esconde o menu
           }
-      }
+        });
 
-      function clickMenu(){
-          if(itens.style.display == 'block'){
-              itens.style.display = 'none'
-          } else{
-              itens.style.display = 'block'
-          }   
+        // Função para ajustar o menu conforme o tamanho da tela
+        function ajustarMenu() {
+          if (window.innerWidth > 640) {
+            menu.style.display = "flex"; // Mostra o menu fixo em telas grandes
+          } else {
+            menu.style.display = "none"; // Esconde o menu em telas pequenas
+          }
+        }
 
-      }
+        // Executa ao carregar a página e ao redimensionar a tela
+        window.addEventListener("resize", ajustarMenu);
+        ajustarMenu(); // Chama a função ao carregar a página
+      });
     </script>
   </body>
 </html>
