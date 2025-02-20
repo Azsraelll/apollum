@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "titulo";
+  src: url(../fontes/Mono-Light.ttf);
+}
+
+@font-face {
+  font-family: "corpo";
+  src: url(../fontes/Mono-Regular.ttf);
+}
+
+@keyframes movimentoCirculo {
+  0% {
+    transform: rotateY(0deg) rotateX(45deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(45deg);
+  }
+}
+
+:root {
+  --preto: #000c0d;
+  --verde: #266569;
+  --verde-claro: #3e7e77;
+  --verde-escuro: #022601;
+  --laranja: #f2af5c;
+  --laranja-claro: #ffcd71;
+  --fonte: "titulo", serif;
+  --fonte-botao: "corpo", serif;
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+   header{
+       flex-direction: row;
+   } 
+}
